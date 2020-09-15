@@ -9,7 +9,7 @@ calibrated = pickle.load(open("calibrated_for_probability.pickle", 'rb'))
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def predict():
     data = request.get_json()
     print(data)
